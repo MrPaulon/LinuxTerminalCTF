@@ -5,7 +5,7 @@ var usermachine = document.getElementById("user-machine");
 directory.innerHTML = "~";
 document.getElementById("server").style.visibility = "visible";
 //let person = prompt("linuxterminal user:", "");
-//if (person == "mrpaulon") {
+//if (person == "administrateur") {
   //popuppsw()
 //} else {
   //popupusr()
@@ -13,7 +13,7 @@ document.getElementById("server").style.visibility = "visible";
 document.getElementById("server").style.visibility = "visible";
 function popupusr(){
     let person = prompt("linuxterminal user:", "");
-    if (person == "mrpaulon") {
+    if (person == "administrateur") {
       popuppsw()
     } else {
       popupusr()
@@ -36,8 +36,11 @@ input.addEventListener("keyup", function(event) {
     if(cmd[0] == "ls"){
       ls()
     }
-    if(cmd[0] == "cd"){
+    else if(cmd[0] == "cd"){
       cd(cmd[1])
+    }
+    else {
+      outputserver.innerHTML = ""+outputserver.innerHTML+"<p>"+ usermachine.innerHTML +"&ensp;"+cmd[0]+" n'est pas une commande valide</p>";
     }
     input.value = "";
   }
