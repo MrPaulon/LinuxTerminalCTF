@@ -4,12 +4,12 @@ var outputserver = document.getElementById("outputserver");
 var usermachine = document.getElementById("user-machine");
 directory.innerHTML = "~";
 document.getElementById("server").style.visibility = "visible";
-//let person = prompt("linuxterminal user:", "");
-//if (person == "administrateur") {
-  //popuppsw()
-//} else {
-  //popupusr()
-//};
+let person = prompt("linuxterminal user:", "");
+if (person == "administrateur") {
+  popuppsw()
+} else {
+  popupusr()
+};
 document.getElementById("server").style.visibility = "visible";
 function popupusr(){
     let person = prompt("linuxterminal user:", "");
